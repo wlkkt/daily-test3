@@ -81,4 +81,44 @@
 //  }
 
 
-
+// #include <stdio.h>
+//#include <unistd.h>
+//#include <stdlib.h>
+//#include <sys/types.h>
+//#include <sys/wait.h>
+//int main()
+//{
+//    printf("test.c begin ...!\n");
+//
+//
+//    pid_t id = fork();
+//    if (id == 0)
+//    {
+//        sleep(2);
+//
+//        char* const argv[] =
+//        {
+//            (char*)"ls",
+//              (char*)"-l",
+//               (char*)"-a",
+//                (char*)"--color",
+//             NULL
+//        };
+//
+//        char* const envp[] =
+//        {
+//            (char*)"HELLO=123456",//自定义环境变量HELLO                                                     
+//  (char*)"WORLD=789101",//自定义环境变量WORLD
+//            NULL
+//        };
+//
+//
+//        //child
+//        //execl("/usr/bin/ls","ls",NULL);
+//       //execv("/usr/bin/ls",argv);//向ls程序的main函数输入命令行参数
+//      //execvp("ls",argv);//向ls程序的main函数输入命令行参数,只需要告诉要执行程序的名称，编译器自动寻找路>      径
+//
+//        execvpe("/usr/bin/ls", argv, envp);
+//
+//    }
+//
