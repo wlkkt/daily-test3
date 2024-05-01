@@ -122,3 +122,62 @@
 //
 //    }
 //
+
+
+
+
+
+
+//#include <stdio.h>
+//#include <sys/types.h>
+//#include <sys/stat.h>
+//#include <fcntl.h>
+//#include <string.h>
+//#include <unistd.h>
+//
+//int main()
+//{
+//
+//	const char* message = "hello Linux file!\n";
+//	write(1, message, strlen(message));//尝试直接向代表标准输出流的显示器的1中写入message
+//
+//
+//	// umask(0);//修改默认权限掩码，防止默认权限掩码对我们的设定产生影响
+//	//系统调用接口
+//	//int fd = open("log.txt",O_WRONLY | O_CREAT | O_TRUNC,0666);//写方式打开,不存在就创建,存在就先清空 
+//	// int fd1 = open("log.txt",O_WRONLY | O_CREAT | O_APPEND,0666);//写方式打开,不存在就创建,存在就追加
+//	// int fd2 = open("log.txt",O_WRONLY | O_CREAT ,0666);//写方式打开,不存在就创建,存在就覆盖着写,新内容可能全部覆盖原内容可能只覆盖开头的一部分
+//	// if(fd < 0)
+//	// {
+//	//     perror("open file");
+//	//     return 1;
+//	// }
+//
+//	// const char * message = "hello Linux file!\n";
+//	// write(fd,message,strlen(message));//向文件中写的时候不需要加\0
+//
+//	// close(fd);
+//	// return 0;
+//}
+
+//#include <stdio.h>
+//#include <sys/types.h>
+//#include <sys/stat.h>
+//#include <fcntl.h>
+//#include <string.h>
+//#include <unistd.h>
+//#include <stdlib.h>
+//
+//const char* filename = "log.txt";
+//
+//int main()
+//{
+//    int fd = open(filename, O_CREAT | O_WRONLY | O_TRUNC, 0666);//此时该文件的文件描述符应该为1
+//    dup2(fd, 1);//此时文件描述符1所关联的文件就是fd中存放的值所关联的文件，二者同时关联同一文件
+//
+//
+//    printf("printf, fd: %d\n", fd);
+//    fprintf(stdout, "fprintf, fd: %d\n", fd);
+//
+//    return 0;
+//}
