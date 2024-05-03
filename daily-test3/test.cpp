@@ -187,21 +187,21 @@ rm - rf myfile
 //    return 0;
 //}
 
-
-// 对头出队列
-void QueuePop(Queue* pq)
-{
-	assert(pq);
-
-	assert(pq->phead);
-
-	QNode* del = pq->phead;
-	pq->phead = pq->phead->next;
-	free(del);
-	del = NULL;
-
-	if (pq->phead == NULL)
-		pq->ptail = NULL;
-
-	pq->size--;
-}
+//
+//// 对头出队列
+//void QueuePop(Queue* pq)
+//{
+//	assert(pq);
+//
+//	assert(pq->phead);
+//
+//	QNode* del = pq->phead;
+//	pq->phead = pq->phead->next;
+//	free(del);
+//	del = NULL;
+//
+//	if (pq->phead == NULL)
+//		pq->ptail = NULL;
+//
+//	pq->size--;
+//}
