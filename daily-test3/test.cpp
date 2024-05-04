@@ -216,65 +216,65 @@ rm - rf myfile
  * };
  */
 
-
-    struct ListNode* reverseList(struct ListNode* head) {
-    struct ListNode* pre = NULL;
-    struct ListNode* cur = head;
-    while (cur) {
-        struct ListNode* next = cur->next;
-        cur->next = prev;
-        pre = curr;
-        cur = next;
-    }
-    return pre;
-}
-
-
-
-    //当传入的两个链表其中有一个为空，那么返回另一个链表即可
-    if (list1 == NULL)
-    {
-        return list2;
-    }
-    if (list2 == NULL)
-    {
-        return list1;
-    }
-
-
-
-    int removeDuplicates(int* nums, int numsSize)
-    {
-
-        int fast = 1, slow = 1;
-
-        while (fast < numsSize)
-        {
-            if (nums[fast] != nums[fast - 1])
-            {
-                nums[slow] = nums[fast];
-                ++slow;
-            }
-            ++fast;
-        }
-        return slow;
-    }
-
-
-    int removeElement(int* nums, int numsSize, int val)
-    {
-        int left = 0, right = numsSize;
-        while (left < right)
-        {
-            if (nums[left] == val)
-            {
-                nums[left] = nums[right - 1];
-                right--;
-            }
-            else
-            {
-                left++;
-            }
-        }
-        return left;
-    }
+//
+//    struct ListNode* reverseList(struct ListNode* head) {
+//    struct ListNode* pre = NULL;
+//    struct ListNode* cur = head;
+//    while (cur) {
+//        struct ListNode* next = cur->next;
+//        cur->next = prev;
+//        pre = curr;
+//        cur = next;
+//    }
+//    return pre;
+//}
+//
+//
+//
+//    //当传入的两个链表其中有一个为空，那么返回另一个链表即可
+//    if (list1 == NULL)
+//    {
+//        return list2;
+//    }
+//    if (list2 == NULL)
+//    {
+//        return list1;
+//    }
+//
+//
+//
+//    int removeDuplicates(int* nums, int numsSize)
+//    {
+//
+//        int fast = 1, slow = 1;
+//
+//        while (fast < numsSize)
+//        {
+//            if (nums[fast] != nums[fast - 1])
+//            {
+//                nums[slow] = nums[fast];
+//                ++slow;
+//            }
+//            ++fast;
+//        }
+//        return slow;
+//    }
+//
+//
+//    int removeElement(int* nums, int numsSize, int val)
+//    {
+//        int left = 0, right = numsSize;
+//        while (left < right)
+//        {
+//            if (nums[left] == val)
+//            {
+//                nums[left] = nums[right - 1];
+//                right--;
+//            }
+//            else
+//            {
+//                left++;
+//            }
+//        }
+//        return left;
+//    }
