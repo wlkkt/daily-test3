@@ -278,3 +278,90 @@ rm - rf myfile
 //        }
 //        return left;
 //    }
+
+
+
+
+
+
+/**
+ * Definition for a binary tree node.
+ * struct TreeNode {
+ *     int val;
+ *     struct TreeNode *left;
+ *     struct TreeNode *right;
+ * };
+ */
+//int height(struct TreeNode* root) {
+//    if (root == NULL) {
+//        return 0;
+//    }
+//    else {
+//        return fmax(height(root->left), height(root->right)) + 1;
+//    }
+//}
+//
+//bool isBalanced(struct TreeNode* root) {
+//    if (root == NULL) {
+//        return true;
+//    }
+//    else
+//    {
+//        //递归祖先结点的整个左子树的左右子树并计算整个左子树的深度、以及整个右子树的左右子树并计算整个左右子树的深度
+//        //由于一颗二叉树是平衡二叉树，则它的所有子树也都是平衡二叉树
+//        return fabs(height(root->left) - height(root->right)) <= 1 && isBalanced(root->left) && isBalanced(root->right);
+//    }
+//}
+//
+//
+//
+//
+///**
+// * Definition for a binary tree node.
+// * struct TreeNode {
+// *     int val;
+// *     struct TreeNode *left;
+// *     struct TreeNode *right;
+// * };
+// */
+//
+//int height(struct TreeNode* root) {
+//    if (root == NULL) {
+//        return 0;
+//    }
+//    int leftHeight = height(root->left);
+//    int rightHeight = height(root->right);
+//    if (leftHeight == -1 || rightHeight == -1 || fabs(leftHeight - rightHeight) > 1) {
+//        return -1;
+//    }
+//    else {
+//        return fmax(leftHeight, rightHeight) + 1;
+//    }
+//}
+////因为自底向上的判断过程中，如果某一节点不满足平衡条件，那么该节点向上层父节点返回-1，上层结点如果发现自己的左右结点有一个为-1，就表示它知道这棵树不是平衡二叉树，自己也就不再判断而直接再次向自己的上层结点返回-1，所以最后根结点直接判断是不是大于零就行，因为如果不是平衡二叉树最后根节点会返回-1.
+//
+//
+//bool isBalanced(struct TreeNode* root) {
+//    return height(root) >= 0;
+//}
+//
+//
+///**
+// * Definition for a binary tree node.
+// * struct TreeNode {
+// *     int val;
+// *     struct TreeNode *left;
+// *     struct TreeNode *right;
+// * };
+// */
+//
+//struct TreeNode* invertTree(struct TreeNode* root) {
+//    if (root == NULL) {
+//        return NULL;
+//    }
+//    struct TreeNode* left = invertTree(root->left);
+//    struct TreeNode* right = invertTree(root->right);
+//    root->left = right;
+//    root->right = left;
+//    return root;
+//}
